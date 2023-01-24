@@ -14,8 +14,203 @@
     <link href="./resources/plugins.css" rel="stylesheet">
     <link href="./resources/style.css" rel="stylesheet">
     <link href="./resources/custom.css" rel="stylesheet">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="./vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./vendor/revolution-slider/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="./vendor/revolution-slider/revolution/css/settings.css">
+    <link rel="stylesheet" href="./vendor/revolution-slider/revolution/css/layers.css">
+    <link rel="stylesheet" href="./vendor/revolution-slider/revolution/css/navigation.css">
+    <!-- JS Global Compulsory -->
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/jquery-migrate/jquery-migrate.min.js"></script>
+    <script src="./vendor/popper.js/popper.min.js"></script>
+    <script src="./vendor/bootstrap/bootstrap.min.js"></script>
+    <link href="./vendor/slick-carousel/slick/slick.css">
+
+    <!--Plugins-->
+    <script src="./resources/jquery.min.js"></script>
+    <script src="./resources/plugins.js"></script>
+    <script src="./resources/custom.js"></script>
+    <script src="./resources/appear.js"></script>
+
+    <!--Template functions-->
+    <script src="./resources/functions.js"></script>
+    <script src="./vendor/revolution-slider/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="./vendor/revolution-slider/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    <script src="./vendor/revolution-slider/revolution-addons/slicey/js/revolution.addon.slicey.min.js"></script>
+
+    <script src="./vendor/revolution-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="./vendor/revolution-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="./vendor/revolution-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="./vendor/revolution-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="./vendor/revolution-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="./vendor/revolution-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="./vendor/revolution-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="./vendor/revolution-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="./vendor/revolution-slider/revolution/js/extensions/revolution.extension.video.min.js"></script>
 </head>
+<!-- JS Plugins Init. -->
+<script>
+
+    // initialization of slider revolution
+    var tpj = jQuery,
+        revapi26;
+
+    tpj(document).ready(function () {
+        if (tpj("#rev_slider_26_1").revolution == undefined) {
+            revslider_showDoubleJqueryError("#rev_slider_26_1");
+        } else {
+            revapi26 = tpj("#rev_slider_26_1").show().revolution({
+                sliderType: "standard",
+                jsFileLocation: "revolution/js/",
+                sliderLayout: "fullscreen",
+                dottedOverlay: "none",
+                delay: 6000,
+                navigation: {
+                    keyboardNavigation: "off",
+                    keyboard_direction: "horizontal",
+                    mouseScrollNavigation: "off",
+                    mouseScrollReverse: "default",
+                    onHoverStop: "off",
+                    touch: {
+                        touchenabled: "on",
+                        touchOnDesktop: "off",
+                        swipe_threshold: 75,
+                        swipe_min_touches: 1,
+                        swipe_direction: "horizontal",
+                        drag_block_vertical: false
+                    },
+                    arrows: {
+                        style: "uranus",
+                        enable: true,
+                        hide_onmobile: true,
+                        hide_under: 778,
+                        hide_onleave: false,
+                        tmp: '',
+                        left: {
+                            h_align: "left",
+                            v_align: "center",
+                            h_offset: 15,
+                            v_offset: 0
+                        },
+                        right: {
+                            h_align: "right",
+                            v_align: "center",
+                            h_offset: 15,
+                            v_offset: 0
+                        }
+                    },
+                    bullets: {
+                        enable: true,
+                        hide_onmobile: false,
+                        style: "bullet-bar",
+                        hide_onleave: false,
+                        direction: "horizontal",
+                        h_align: "center",
+                        v_align: "bottom",
+                        h_offset: 0,
+                        v_offset: 30,
+                        space: 5,
+                        tmp: ''
+                    }
+                },
+                responsiveLevels: [1240, 1024, 778, 480],
+                visibilityLevels: [1240, 1024, 778, 480],
+                gridwidth: [1240, 1024, 778, 480],
+                gridheight: [868, 768, 960, 720],
+                lazyType: "none",
+                parallax: {
+                    type: "scroll",
+                    origo: "slidercenter",
+                    speed: 2000,
+                    levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 51, 55]
+                },
+                shadow: 0,
+                spinner: "off",
+                stopLoop: "off",
+                stopAfterLoops: -1,
+                stopAtSlide: -1,
+                shuffle: "off",
+                autoHeight: "off",
+                fullScreenAutoWidth: "off",
+                fullScreenAlignForce: "off",
+                fullScreenOffsetContainer: "",
+                fullScreenOffset: "60px",
+                hideThumbsOnMobile: "off",
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                debugMode: false,
+                fallbacks: {
+                    simplifyAll: "off",
+                    nextSlideOnWindowFocus: "off",
+                    disableFocusListener: false
+                }
+            });
+        }
+    });
+
+    // initialization of google map
+    function initMap() {
+        $.HSCore.components.HSGMap.init('.js-g-map');
+    }
+
+    $(document).on('ready', function () {
+        // initialization of carousel
+        $.HSCore.components.HSCarousel.init('.js-carousel');
+
+        // initialization of header
+        $.HSCore.components.HSHeader.init($('#js-header'));
+        $.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+        // initialization of tabs
+        $.HSCore.components.HSTabs.init('[role="tablist"]');
+
+
+        // initialization of vertical progress bars
+        var verticalProgressBars = $.HSCore.components.HSProgressBar.init('.js-vr-progress-bar', {
+            direction: 'vertical',
+            indicatorSelector: '.js-progress-bar-indicator'
+        });
+
+
+        // initialization of go to section
+        $.HSCore.components.HSGoTo.init('.js-go-to');
+
+
+
+        // initialization of popups
+        $.HSCore.components.HSPopup.init('.js-fancybox-media', {
+            helpers: {
+                media: {},
+                overlay: {
+                    css: {
+                        'background': 'rgba(255, 255, 255, .8)'
+                    }
+                }
+            }
+        });
+
+        // initialization of chart pies with rtl option
+        var rtlItems = $.HSCore.components.HSChartPie.init('.js-pie-rtl', {
+            rtl: true
+        });
+    });
+
+    $(window).on('load', function () {
+        // initialization of HSScrollNav
+        $.HSCore.components.HSScrollNav.init($('#js-scroll-nav'), {
+            duration: 700
+        });
+    });
+
+    $(window).on('resize', function () {
+        setTimeout(function () {
+            $.HSCore.components.HSTabs.init('[role="tablist"]');
+        }, 200);
+    });
+</script>
 
 <body class="breakpoint-xl b--desktop">
 <!-- Body Inner -->
@@ -64,38 +259,83 @@
 </header>
 <!-- end: Header -->
 
+    <!-- Revolution Slider -->
+    <div class="g-overflow-hidden">
+        <div id="rev_slider_26_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="mask-showcase" data-source="gallery" style="background:#aaaaaa;padding:0px;">
+            <!-- START REVOLUTION SLIDER 5.4.1 fullscreen mode -->
+            <div id="rev_slider_26_1" class="rev_slider fullscreenbanner tiny_bullet_slider" style="display:none;" data-version="5.4.1">
+                <ul>
+                    <!-- SLIDE  -->
+                    <li data-index="rs-73" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb=""
+                        data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                        <!-- MAIN IMAGE -->
+                        <img src="./img/bg/transparent2.png" data-bgcolor='linear-gradient(90deg, rgba(0, 0, 153, 0.5) 0%, rgba(0, 190, 214, 0.6) 100%)' style='background:linear-gradient(90deg, rgba(0, 0, 153, 0.5) 0%, rgba(0, 190, 214, 0.6) 100%)' alt="" data-bgposition="center center"
+                             data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                        <!-- LAYERS -->
 
-<!-- Slider -->
-<div id="slider" class="inspiro-slider slider-halfscreen dots-dark arrows-dark dots-creative flickity-enabled is-fade" data-fade="true" data-height-xs="360">
-<div class="flickity-viewport" style="touch-action: pan-y;">
-    <div class="flickity-slider" style="left: 0px; transform: translateX(0%);"><div class="slide background-image is-selected" style="background-image: url(&quot;img/slider01.jpg&quot;); position: absolute; left: 0%; opacity: 1;">
-        <div class="container">
-            <div class="slide-captions text-right">
-                <!-- Captions -->
-                <h2 class="text-dark text-lg fadeInUp" style="opacity: 1; animation-duration: 600ms;">A new type of general trading company</h2>
-                <!-- end: Captions -->
+
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption   tp-resizeme rs-parallaxlevel-2" id="slide-73-layer-1" data-x="['center','center','center','center']" data-hoffset="['500','500','390','220']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="none"
+                             data-height="none" data-whitespace="nowrap" data-type="image" data-responsive_offset="on" data-frames='[{"delay":400,"speed":750,"sfxcolor":"#2f3b4a","sfx_effect":"blockfromleft","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
+                             data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;">
+                            <img src="./img-temp/900x600/img991.jpg" alt="" data-ww="['1000px','1000px','800px','500px']" data-hh="['563px','563px','450','281']" width="1200" height="675" data-no-retina>
+                        </div>
+
+                        <!-- LAYER NR. 3 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-73-layer-3" data-x="['left','left','left','left']" data-hoffset="['150','100','50','20']" data-y="['middle','middle','middle','middle']" data-voffset="['-177','-177','-177','-157']" data-width="none" data-height="none"
+                             data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":300,"speed":750,"sfxcolor":"#ffff58","sfx_effect":"blockfromleft","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
+                             data-textAlign="['left','left','left','left']" data-paddingtop="[10,10,10,10]" data-paddingright="[20,20,20,20]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[20,20,20,20]" style="z-index: 7; white-space: normal; font-size: 20px; line-height: 20px; font-weight: 400; color: #ffffff; letter-spacing: 10px;">
+                        </div>
+
+                        <!-- LAYER NR. 4 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-73-layer-2" data-x="['left','left','left','left']" data-hoffset="['150','100','50','20']" data-y="['middle','middle','middle','middle']" data-voffset="['-30','-30','-30','-30']" data-fontsize="['70','70','70','50']"
+                             data-lineheight="['70','70','70','50']" data-width="['650','650','620','380']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":200,"speed":750,"sfxcolor":"#ffff58","sfx_effect":"blockfromleft","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
+                             data-textAlign="['left','left','left','left']" data-paddingtop="[20,20,20,20]" data-paddingright="[20,20,20,20]" data-paddingbottom="[30,30,30,30]" data-paddingleft="[20,20,20,20]" style="z-index: 8; min-width: 650px; max-width: 650px; white-space: normal; font-size: 40px; font-weight: 600; line-height: 50px; color: #ffffff; letter-spacing: -2px;"><span class="g-font-size-25">事業経営モデルによる経済価値・社会価値・環境価値の三価値同時実現を前提とした成長を目指します</span>
+                        </div>
+                    </li>
+                    <!-- SLIDE  -->
+                    <li data-index="rs-74" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb=""
+                        data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                        <!-- MAIN IMAGE -->
+                        <img src="./img/bg/transparent2.png" data-bgcolor='linear-gradient(120deg, #b7ebf6 0%, rgba(228, 97, 210, 0.7) 100%)' style='background:linear-gradient(120deg, #b7ebf6 0%, rgba(228, 97, 210, 0.7) 100%)' alt="" data-bgposition="center center"
+                             data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                        <!-- LAYERS -->
+
+                        <!-- LAYER NR. 5 -->
+                        <div class="tp-caption   tp-resizeme rs-parallaxlevel-2" id="slide-74-layer-1" data-x="['center','center','center','center']" data-hoffset="['-500','-500','-390','-220']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                             data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-responsive_offset="on" data-frames='[{"delay":200,"speed":750,"sfxcolor":"#243949","sfx_effect":"blockfromright","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoright","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
+                             data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;">
+                            <img src="./img-temp/900x600/img13.jpg" alt="" data-ww="['1000px','1000px','800px','500px']" data-hh="['563px','563px','450px','281px']" width="1200" height="675" data-no-retina>
+                        </div>
+
+
+
+                        <!-- LAYER NR. 7 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-74-layer-3" data-x="['left','left','left','left']" data-hoffset="['820','700','540','270']" data-y="['middle','middle','middle','middle']" data-voffset="['-177','-177','-177','-157']" data-width="none" data-height="none"
+                             data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":400,"speed":750,"sfxcolor":"#cbbacc","sfx_effect":"blockfromright","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoright","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
+                             data-textAlign="['left','left','left','left']" data-paddingtop="[10,10,10,10]" data-paddingright="[20,20,20,20]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[20,20,20,20]" style="z-index: 7; white-space: normal; font-size: 20px; line-height: 20px; font-weight: 400; color: #ffffff; letter-spacing: 10px;">
+                        </div>
+
+                        <!-- LAYER NR. 8 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-74-layer-2" data-x="['left','left','left','left']" data-hoffset="['360','240','110','80']" data-y="['middle','middle','middle','middle']" data-voffset="['-30','-30','-30','-30']" data-fontsize="['70','70','70','50']"
+                             data-lineheight="['70','70','70','50']" data-width="['650','650','620','380']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":300,"speed":750,"sfxcolor":"#cbbacc","sfx_effect":"blockfromright","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoright","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
+                             data-textAlign="['right','right','right','right']" data-paddingtop="[20,20,20,20]" data-paddingright="[10,10,10,10]" data-paddingbottom="[30,30,30,30]" data-paddingleft="[20,20,20,20]" style="z-index: 8; min-width: 650px; max-width: 650px; white-space: normal; font-size: 70px; font-weight: 600; line-height: 0px; color: #ffffff; letter-spacing: -2px;"><span class="g-font-size-25">全産業を俯瞰した総合力、新たな事業を産み出す構想力、それらを実行する経営人材が全日本通商の強みです</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="tp-bannertimer" style="height: 10px; background: rgba(0, 0, 0, 0.15);"></div>
             </div>
         </div>
     </div>
-        <div class="slide" style="background-image: url(&quot;img/slider02.jpg&quot;); position: absolute; left: 0%; opacity: 0;" aria-hidden="true">
-        <div class="container">
-            <div class="slide-captions text-right">
-                <h2 class="text-dark text-lg">新たな形の総合商社へ</h2>
-            </div>
-        </div>
-    </div>
-    </div>
-</div><button class="flickity-button flickity-prev-next-button previous" type="button" aria-label="Previous"><svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path></svg></button><button class="flickity-button flickity-prev-next-button next" type="button" aria-label="Next"><svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></button><ol class="flickity-page-dots"><li class="dot is-selected" aria-label="Page dot 1" aria-current="step"></li><li class="dot" aria-label="Page dot 2"></li></ol></div>
-<!--end: Slider -->
-
+    <!-- End Revolution Slider -->
 <!-- ADVANTAGE & VISION -->
 <section class="box-fancy section-fullwidth text-light no-padding">
     <div class="row">
-        <div class="col-lg-6 text-right" style="background-color: #b41525">
+        <div class="col-lg-6 text-right" style="background-color: #2b4961">
             <h2>OUR ADVANTAGE</h2>
             <span class="lead">...</span>
         </div>
-        <div class="col-lg-6 text-left" style="background-color: #c31e2f">
+        <div class="col-lg-6 text-left" style="background-color: #345775">
             <h2>OUR VISION</h2>
             <span class="lead">...</span>
         </div>
@@ -184,15 +424,10 @@
     </div>
 </div></section>
 <!-- end: News -->
+    <div class="g-pos-rel g-height-400">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.7542244025913!2d139.70623331517277!3d35.732262580182415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5e8ffa5d79%3A0xf563b09096e6a074!2z44CSMTcxLTAwMTQg5p2x5Lqs6YO96LGK5bO25Yy65rGg6KKL77yS5LiB55uu77yW4oiS77yRIEtEWOaxoOiii-ODk-ODqyA46ZqO!5e0!3m2!1sja!2sjp!4v1674543527824!5m2!1sja!2sjp" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-<!-- MAP -->
-<section id="section6" class="no-padding">
-    <!-- Google Map -->
-    <div class="map">
-    <iframe src="./resources/embed.html" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
-    <!-- end: Google Map -->
-</section>
 
 
 <!-- end: MAP -->
@@ -277,12 +512,4 @@
 </div>
 <a id="scrollTop" style="bottom: 16px; opacity: 0;"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
 
-<!--Plugins-->
-<script src="./resources/jquery.min.js"></script>
-<script src="./resources/plugins.js"></script>
-<script src="./resources/custom.js"></script>
-<script src="./resources/appear.js"></script>
-
-<!--Template functions-->
-<script src="./resources/functions.js"></script>
 </body></html>

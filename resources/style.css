@@ -2177,7 +2177,7 @@ Overlay Menu
 /*Menu Dark*/
 .dark #mainMenu nav > ul > li > a,
 #mainMenu.dark nav > ul > li > a {
-  color: #black;
+  color: #000000FF;
 }
 .dark #mainMenu nav > ul > li.hover-active > a,
 .dark #mainMenu nav > ul > li.hover-active > span, .dark #mainMenu nav > ul > li.current > a,
@@ -2192,7 +2192,7 @@ Overlay Menu
 #mainMenu.dark nav > ul > li:hover > span,
 #mainMenu.dark nav > ul > li:focus > a,
 #mainMenu.dark nav > ul > li:focus > span {
-  color: #e2e2e2;
+  color: #000099D1;
 }
 .dark #mainMenu nav > ul > li.dropdown:before,
 #mainMenu.dark nav > ul > li.dropdown:before {
@@ -2289,14 +2289,14 @@ Overlay Menu
 #mainMenu.dark.menu-outline nav > ul > li.current > a,
 #mainMenu.dark.menu-outline nav > ul > li:hover > a,
 #mainMenu.dark.menu-outline nav > ul > li:focus > a {
-  color: #941f23;
+  color: #000099D1;
   border-color: #941f23;
 }
 .dark:not(.submenu-light) #mainMenu.menu-lines nav > ul > li.current > a, .dark:not(.submenu-light) #mainMenu.menu-lines nav > ul > li:hover > a, .dark:not(.submenu-light) #mainMenu.menu-lines nav > ul > li:focus > a,
 #mainMenu.dark.menu-lines nav > ul > li.current > a,
 #mainMenu.dark.menu-lines nav > ul > li:hover > a,
 #mainMenu.dark.menu-lines nav > ul > li:focus > a {
-  color: #941f23;
+  color: #000099D1;
 }
 .dark:not(.submenu-light) #mainMenu.menu-lines nav > ul > li.current > a:after, .dark:not(.submenu-light) #mainMenu.menu-lines nav > ul > li:hover > a:after, .dark:not(.submenu-light) #mainMenu.menu-lines nav > ul > li:focus > a:after,
 #mainMenu.dark.menu-lines nav > ul > li.current > a:after,

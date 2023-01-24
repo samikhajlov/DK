@@ -2177,7 +2177,7 @@ Overlay Menu
 /*Menu Dark*/
 .dark #mainMenu nav > ul > li > a,
 #mainMenu.dark nav > ul > li > a {
-  color: #ffffff;
+  color: #black;
 }
 .dark #mainMenu nav > ul > li.hover-active > a,
 .dark #mainMenu nav > ul > li.hover-active > span, .dark #mainMenu nav > ul > li.current > a,

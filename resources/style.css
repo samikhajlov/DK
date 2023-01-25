@@ -13887,7 +13887,7 @@ div.icon-box:before {
 }
 
 .icon-box {
-  margin-bottom: 50px;
+  margin-bottom: 0;
   position: relative;
 }
 .icon-box .icon {

@@ -52,103 +52,97 @@
 </head>
 <!-- JS Plugins Init. -->
 <script>
-
     // initialization of slider revolution
-    var tpj = jQuery,
+    let tpj = jQuery,
         revapi26;
-
     tpj(document).ready(function () {
-        if (tpj("#rev_slider_26_1").revolution == undefined) {
-            revslider_showDoubleJqueryError("#rev_slider_26_1");
-        } else {
-            revapi26 = tpj("#rev_slider_26_1").show().revolution({
-                sliderType: "standard",
-                jsFileLocation: "revolution/js/",
-                sliderLayout: "fullscreen",
-                dottedOverlay: "none",
-                delay: 6000,
-                navigation: {
-                    keyboardNavigation: "off",
-                    keyboard_direction: "horizontal",
-                    mouseScrollNavigation: "off",
-                    mouseScrollReverse: "default",
-                    onHoverStop: "off",
-                    touch: {
-                        touchenabled: "on",
-                        touchOnDesktop: "off",
-                        swipe_threshold: 75,
-                        swipe_min_touches: 1,
-                        swipe_direction: "horizontal",
-                        drag_block_vertical: false
+        revapi26 = tpj("#rev_slider_26_1").show().revolution({
+            sliderType: "standard",
+            jsFileLocation: "revolution/js/",
+            sliderLayout: "fullscreen",
+            dottedOverlay: "none",
+            delay: 6000,
+            navigation: {
+                keyboardNavigation: "off",
+                keyboard_direction: "horizontal",
+                mouseScrollNavigation: "off",
+                mouseScrollReverse: "default",
+                onHoverStop: "off",
+                touch: {
+                    touchenabled: "on",
+                    touchOnDesktop: "off",
+                    swipe_threshold: 75,
+                    swipe_min_touches: 1,
+                    swipe_direction: "horizontal",
+                    drag_block_vertical: false
+                },
+                arrows: {
+                    style: "uranus",
+                    enable: true,
+                    hide_onmobile: true,
+                    hide_under: 778,
+                    hide_onleave: false,
+                    tmp: '',
+                    left: {
+                        h_align: "left",
+                        v_align: "center",
+                        h_offset: 15,
+                        v_offset: 0
                     },
-                    arrows: {
-                        style: "uranus",
-                        enable: true,
-                        hide_onmobile: true,
-                        hide_under: 778,
-                        hide_onleave: false,
-                        tmp: '',
-                        left: {
-                            h_align: "left",
-                            v_align: "center",
-                            h_offset: 15,
-                            v_offset: 0
-                        },
-                        right: {
-                            h_align: "right",
-                            v_align: "center",
-                            h_offset: 15,
-                            v_offset: 0
-                        }
-                    },
-                    bullets: {
-                        enable: true,
-                        hide_onmobile: false,
-                        style: "bullet-bar",
-                        hide_onleave: false,
-                        direction: "horizontal",
-                        h_align: "center",
-                        v_align: "bottom",
-                        h_offset: 0,
-                        v_offset: 30,
-                        space: 5,
-                        tmp: ''
+                    right: {
+                        h_align: "right",
+                        v_align: "center",
+                        h_offset: 15,
+                        v_offset: 0
                     }
                 },
-                responsiveLevels: [1240, 1024, 778, 480],
-                visibilityLevels: [1240, 1024, 778, 480],
-                gridwidth: [1240, 1024, 778, 480],
-                gridheight: [868, 768, 960, 720],
-                lazyType: "none",
-                parallax: {
-                    type: "scroll",
-                    origo: "slidercenter",
-                    speed: 2000,
-                    levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 51, 55]
-                },
-                shadow: 0,
-                spinner: "off",
-                stopLoop: "off",
-                stopAfterLoops: -1,
-                stopAtSlide: -1,
-                shuffle: "off",
-                autoHeight: "off",
-                fullScreenAutoWidth: "off",
-                fullScreenAlignForce: "off",
-                fullScreenOffsetContainer: "",
-                fullScreenOffset: "60px",
-                hideThumbsOnMobile: "off",
-                hideSliderAtLimit: 0,
-                hideCaptionAtLimit: 0,
-                hideAllCaptionAtLilmit: 0,
-                debugMode: false,
-                fallbacks: {
-                    simplifyAll: "off",
-                    nextSlideOnWindowFocus: "off",
-                    disableFocusListener: false
+                bullets: {
+                    enable: true,
+                    hide_onmobile: false,
+                    style: "bullet-bar",
+                    hide_onleave: false,
+                    direction: "horizontal",
+                    h_align: "center",
+                    v_align: "bottom",
+                    h_offset: 0,
+                    v_offset: 30,
+                    space: 5,
+                    tmp: ''
                 }
-            });
-        }
+            },
+            responsiveLevels: [1240, 1024, 778, 480],
+            visibilityLevels: [1240, 1024, 778, 480],
+            gridwidth: [1240, 1024, 778, 480],
+            gridheight: [868, 768, 960, 720],
+            lazyType: "none",
+            parallax: {
+                type: "scroll",
+                origo: "slidercenter",
+                speed: 2000,
+                levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 51, 55]
+            },
+            shadow: 0,
+            spinner: "off",
+            stopLoop: "off",
+            stopAfterLoops: -1,
+            stopAtSlide: -1,
+            shuffle: "off",
+            autoHeight: "off",
+            fullScreenAutoWidth: "off",
+            fullScreenAlignForce: "off",
+            fullScreenOffsetContainer: "",
+            fullScreenOffset: "60px",
+            hideThumbsOnMobile: "off",
+            hideSliderAtLimit: 0,
+            hideCaptionAtLimit: 0,
+            hideAllCaptionAtLilmit: 0,
+            debugMode: false,
+            fallbacks: {
+                simplifyAll: "off",
+                nextSlideOnWindowFocus: "off",
+                disableFocusListener: false
+            }
+        });
     });
 
     // initialization of google map
@@ -169,7 +163,7 @@
 
 
         // initialization of vertical progress bars
-        var verticalProgressBars = $.HSCore.components.HSProgressBar.init('.js-vr-progress-bar', {
+        const verticalProgressBars = $.HSCore.components.HSProgressBar.init('.js-vr-progress-bar', {
             direction: 'vertical',
             indicatorSelector: '.js-progress-bar-indicator'
         });
@@ -193,7 +187,7 @@
         });
 
         // initialization of chart pies with rtl option
-        var rtlItems = $.HSCore.components.HSChartPie.init('.js-pie-rtl', {
+        const rtlItems = $.HSCore.components.HSChartPie.init('.js-pie-rtl', {
             rtl: true
         });
     });
@@ -223,9 +217,9 @@
             <!--Logo-->
             <div id="logo"> <a href="/"><span class="logo-default"><img alt="DK" height="45" src="./resources/logo-no-background.png"></span><span class="logo-dark"><img alt="DK" height="45" src="./resources/logo-no-background.png"></span></a> </div>
             <!--End: Logo-->
-            <!--Navigation Resposnive Trigger-->
+            <!--Navigation Responsive Trigger-->
             <div id="mainMenu-trigger"> <a class="lines-button x"><span class="lines"></span></a> </div>
-            <!--end: Navigation Resposnive Trigger-->
+            <!--end: Navigation Responsive Trigger-->
             <!--Navigation-->
             <div id="mainMenu">
                 <div class="container">
@@ -233,22 +227,6 @@
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="/company">会社概要</a></li>
-                            <li class="dropdown"><span class="dropdown-arrow"></span><a href="/business">店舗・運営サイト</a>
-                                <ul class="dropdown-menu" style="">
-                                    <li class="dropdown-submenu"><span class="dropdown-arrow"></span><a href="/business/shop">店舗一覧</a>
-                                        <ul class="dropdown-menu" style="">
-                                            <li><a href="/business/shop/ootsuka">店</a></li>
-
-                                            <li><a href="/business/shop/ikebukuro">池袋店</a></li>
-                                            <li><a href="/business/shop/shinjuku">新宿店</a></li>
-                                            <li><a href="/business/shop/kitatoda">北戸田倉庫物流センター</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="/business/site">運営サイト一覧</a></li>
-                                </ul>
-                            </li><li><a href="/supplier">取引先募集</a></li>
-                            <li><a href="/" target="_blank">採用情報</a></li>
-                            <li><a href="/inquiry">お問い合わせ</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -355,81 +333,22 @@
             <!-- features box -->
             <div class="col-lg-4">
                 <img src="./resources/business01.jpg" class="img-fluid m-b-20">
-                <h4>輸出入および製造、販売</h4>
+                <h4>輸出入及び仕入・販売</h4>
                 <ul>
                     <li>日用品、雑貨、化粧品、スポーツ用品</li>
                     <li>家庭用電気器具、健康器具、美容器具</li>
                 </ul>
             </div>
             <!-- end: features box -->
-
-            <!-- features box -->
-            <div class="col-lg-4">
-                <img src="./resources/business02.jpg" class="img-fluid m-b-20">
-                <h4>通信販売業務</h4>
-                <p>自社ECサイトを始め、楽天、Yahoo!、Amazon、など主要モール出店をしています。</p>
-            </div>
-            <!-- end: features box -->
-
-            <!-- features box -->
-            <div class="col-lg-4">
-                <img src="./resources/business03.jpg" class="img-fluid m-b-20">
-                <h4>古物、中古品の買取および販売</h4>
-                <p>買取実績は100万件以上！個人のお客様から法人様まで、お取引しています。</p>
-            </div>
-            <!-- end: features box -->
-
         </div>
         <!-- end features box -->
     </div>
 </section>
 <!-- end: Services -->
-
-<!-- News -->
-<section clsss="content background-grey">
-    <div class="container">
-        <div class="heading-text heading-section">
-        <h2>NEWS</h2>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <!-- post content -->
-            <div class="content col-lg-12">
-                <!-- News block -->
-                <div id="blog" class="post-thumbnails">
-                    <!-- Post news -->
-                    <div class="post-item">
-                        <div class="post-item-wrap">
-                            <div class="post-image">
-                                <picture>
-                                    <source srcset="https://placehold.jp/506x337.png" style="width: 100%;">
-                                    <img src="https://placehold.jp/506x337.png" style="width: 100%;">
-                                </picture>
-                                <span class="post-meta-category"><a href="/">通信販売</a></span>
-                            </div>
-                            <div class="post-item-description">
-                                <span class="post-meta-date"><i class="fa fa-calendar-o"></i>2023年01月24日</span>
-                                <h2><a href="/#">Yahoo!ショッピング エリアアワード2020＜第2期＞にて「販売一丁目」エリアカテゴリ賞第3位になりました</a></h2>
-                            <p>内断佑そ良敗びーねっ用月済エケトタ世主セナ便奪ロノハヤ界担チウホテ子宜ろるぎ目戦は控71悩うじ性携投イだがお続振悲毒ねをー。合トコ活冬どら三見わぶ衛読ネ真締夏延メコヨ緊勝ヲニ宿7業ヱ経渡7初クフエ反朝で的専スへそか庁冊剣唯がトどう。豊ハワ視変津クメ初辺ね遺多ちも込89安ちぜに辺条イせすに済術ウスシ達百リ将独ごづねむ現自ふ覚者イヒネシ戦適みク愛成み様皇りぽへ。</p>
-                            <a href="https://store.shopping.yahoo.co.jp/" target="_blank" rel="noopener" class="item-link">Yahoo!ショッピング店 <i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end: Post news -->
-                <!-- end: news block -->
-            </div>
-            <!-- end: post content -->
-        </div>
-    </div>
-</div></section>
-<!-- end: News -->
     <div class="g-pos-rel g-height-400">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.7542244025913!2d139.70623331517277!3d35.732262580182415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5e8ffa5d79%3A0xf563b09096e6a074!2z44CSMTcxLTAwMTQg5p2x5Lqs6YO96LGK5bO25Yy65rGg6KKL77yS5LiB55uu77yW4oiS77yRIEtEWOaxoOiii-ODk-ODqyA46ZqO!5e0!3m2!1sja!2sjp!4v1674543527824!5m2!1sja!2sjp" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
 
     </div>
-
-
 <!-- end: MAP -->
 
 <!-- Footer -->
@@ -437,7 +356,7 @@
     <div class="footer-content">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-6">
                     <div class="logo">
                         <a href="/"><span class="logo-default"><img height="45" src="./resources/logo-no-background.png"></span></a>
                     </div>
@@ -456,23 +375,7 @@
                         <br>
                         </p>
                     </div>
-                <!-- end: address -->
                 </div>
-            <div class="col-md-3">
-                <!-- contact -->
-                <div class="icon-box effect small clean">
-                    <div class="icon">
-                        <a href="#"><i class="fas fa-phone"></i></a>
-                    </div>
-                    <h3>連絡先</h3>
-                    <p><strong>電話:</strong>
-                    <br> <a href="tel:00-0000-0000"> 00-0000-0000</a>
-                    </p><p><strong>FAX:</strong>
-                    <br> 00-0000-0000
-                    </p>
-                </div>
-            <!-- end: contact -->
-            </div>
         <div class="col-md-3">
             <!-- open / mail address -->
             <div class="icon-box effect small clean">
